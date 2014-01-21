@@ -1,8 +1,8 @@
 # Craigslist Jr 
  
-##Learning Competencies 
+## Learning Competencies 
 
-##Summary 
+## Summary 
 
  We're going to build a simple version of Craigslist.  This will be your first web application that uses multiple models.
 
@@ -84,9 +84,9 @@ We'll be picking one pair at random tomorrow morning to show off their version o
 
 This isn't a race; there's no finish line, only a deadline (tomorrow, duh!).  Take the time to make this application something you're proud of.  It doesn't have to be flashy &mdash; it could be a difficult technical hurdle you overcame. 
 
-##Releases
-###Release 0 
+## Releases
+### Release 0 
 
-##Optimize Your Learning 
+## Optimize Your Learning 
 
-##Resources
+## Resources
