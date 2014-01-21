@@ -1,8 +1,8 @@
-# Craigslist Jr 
- 
-## Learning Competencies 
+# Craigslist Jr
 
-## Summary 
+## Learning Competencies
+
+## Summary
 
  We're going to build a simple version of Craigslist.  This will be your first web application that uses multiple models.
 
@@ -82,11 +82,11 @@ One last feature to add: the "this is awesome" feature.  What does awesome mean?
 
 We'll be picking one pair at random tomorrow morning to show off their version of Craigslist.  They'll get a full-on UX and code review.
 
-This isn't a race; there's no finish line, only a deadline (tomorrow, duh!).  Take the time to make this application something you're proud of.  It doesn't have to be flashy &mdash; it could be a difficult technical hurdle you overcame. 
+This isn't a race; there's no finish line, only a deadline (tomorrow, duh!).  Take the time to make this application something you're proud of.  It doesn't have to be flashy &mdash; it could be a difficult technical hurdle you overcame.
 
 ## Releases
-### Release 0 
+### Release 0
 
-## Optimize Your Learning 
+## Optimize Your Learning
 
 ## Resources
