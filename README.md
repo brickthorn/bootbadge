@@ -26,9 +26,8 @@ There is a skeleton available in `/source`, as per usual
 ### Release 0: Wireframe With Your Pair
 
 Never heard of a web wireframe? Check out [what Wikipedia has to
-say](http://en.wikipedia.org/wiki/Website_wireframe). **TL;DR** -- figure out
-what *pages* your app needs, then sketch-out the basic *layout* of each and the
-*connections* between them.
+say][wireframe]. **TL;DR** -- figure out what *pages* your app needs, then
+sketch-out the basic *layout* of each and the *connections* between them.
 
 The application will have two core models: `Post` and `Category`.  A `Post`
 belongs to a `Category` and a `Category` has many `Posts`.
@@ -118,6 +117,13 @@ Take the time to make this application something you're proud of.  It doesn't
 have to be flashy &mdash; it could be a difficult technical hurdle you
 overcame.
 
+Bring 100% of your best self to this feature.  Make something meaningful; make
+something great.
+
 ## Resources
 
+* Create, Read, Update, Delete ([CRUD][])
+* [Wikipedia: Wireframe][wireframe]
+
 [CRUD]: http://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+[wireframe]: http://en.wikipedia.org/wiki/Website_wireframe
