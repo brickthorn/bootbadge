@@ -2,10 +2,10 @@
 
 ## Learning Competencies
 
-* Build a wireframe
-* Deepen your ActiveRecord skills around associations.
+* Build a wireframe to model application views
+* Use Active Record Associations
 * Implement all four parts of [CRUD][]: create, read, update, and delete.
-* Follow the flow through an MVC web application
+* Use the MVC pattern in web applications with proper allocation of code and responsibilities to each layer
 
 ## Summary
 
