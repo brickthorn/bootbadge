@@ -88,14 +88,14 @@ end
 namespace :db do
   desc "Create the database at #{DB_NAME}"
   task :create do
-    puts "Creating database #{DB_NAME} if it doesn't exist..."
-    exec("createdb #{DB_NAME}")
+    puts "Creating database #{DB_NAME} and #{APP_NAME}_test if it doesn't exist..."
+    exec("createdb #{DB_NAME} && createdb #{APP_NAME}_test")
   end
 
   desc "Drop the database at #{DB_NAME}"
   task :drop do
-    puts "Dropping database #{DB_NAME}..."
-    exec("dropdb #{DB_NAME}")
+    puts "Dropping database #{DB_NAME} and #{APP_NAME}_test..."
+    exec("dropdb #{DB_NAME} && dropdb #{APP_NAME}_test")
   end
 
   desc "Migrate the database (options: VERSION=x, VERBOSE=false, SCOPE=blog)."
@@ -104,6 +104,13 @@ namespace :db do
     ActiveRecord::Migration.verbose = ENV["VERBOSE"] ? ENV["VERBOSE"] == "true" : true
     ActiveRecord::Migrator.migrate(ActiveRecord::Migrator.migrations_paths, ENV["VERSION"] ? ENV["VERSION"].to_i : nil) do |migration|
       ENV["SCOPE"].blank? || (ENV["SCOPE"] == migration.scope)
+    end
+  end
+
+  namespace :test do
+    desc "Migrate test database"
+    task :prepare do
+      system "rake db:migrate RACK_ENV=test"
     end
   end
 
