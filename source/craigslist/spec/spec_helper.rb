@@ -18,5 +18,6 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
 
-
-Capybara.app = Sinatra::Application
+def app
+  Sinatra::Application
+end
