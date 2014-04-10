@@ -112,6 +112,13 @@ namespace :db do
     require APP_ROOT.join('db', 'seeds.rb')
   end
 
+  desc "rollback your migration--use STEPS=number to step back multiple times"
+  task :rollback do
+    steps = (ENV['STEPS'] || 1).to_i
+    ActiveRecord::Migrator.rollback('db/migrate', steps)
+    Rake::Task['db:version'].invoke if Rake::Task['db:version']
+  end
+
   desc "Returns the current schema version number"
   task :version do
     puts "Current version: #{ActiveRecord::Migrator.current_version}"
