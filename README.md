@@ -85,7 +85,7 @@ Controllers should either redirect to another URL or render a page.  Typically,
 a page loaded via HTTP POST will redirect to an appropriate URL if a request
 succeeds and render an error page, otherwise.
 
-### Ship it!
+### Release 2: Ship it!
 
 Make sure the core features work.  We should be able to download your app, run
 it, and do the following:
@@ -103,7 +103,20 @@ running.  How might you make sure that *they* are effective with only a basic
 knowledge of the DBCstarter kit?  A good developer makes it easy to get up and
 running because not wasting others' time is a virtue.
 
-### Release 3: Add One Final Feature
+### Release 3: How do you know it works?
+
+You know all those tests you didn't write? It's time to write them. At a minumum, you need to make sure that future users know the following:
+
+1. That all your ActiveRecord associations are valid.
+2. That all your get routes render the page with the correct information.
+3. That all your post, put, and delete routes affect the database in the correct way.
+4. That any helper methods or custom model methods do what you expect them to do.
+
+You'll should be able to do all of this with three gems -- rspec, rack/test (a library on top of rspec for controller testing) , and shoulda-matchers (another library for model testing). They are already installed in your skeleton, and you can simply start writing these tests in the spec folder.
+
+All of these are examples of *unit tests*, and they should attempt to test single methods in isolation of everything else. For the adventurous, I'd suggest trying to write *integration tests*, which test the entire flow of a user through your site. Those are written using Capybara, which is also installed in your skeleton.
+
+### Release 4: Add One Final Feature
 
 One last feature to add: the "this is awesome" feature.  What does awesome
 mean?  It can mean anything.  The code is awesome, there are new awesome
