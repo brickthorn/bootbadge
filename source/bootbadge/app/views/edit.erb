@@ -1,0 +1,9 @@
+
+<h1>Update Slogan</h1>
+
+<form action="/slogans/<%= @slogan.id %>" method="POST">
+	<input type="hidden" name="_method" value="PUT" />
+
+	<%= erb :_slogan_fields %>
+
+</form>

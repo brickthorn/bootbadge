@@ -1,0 +1,18 @@
+
+<h1> Slogan #<%=@slogan.id%></h1>
+
+
+<div>
+<%= @slogan.content %> 
+<a href="/slogans/<%= @slogan.id %>/edit">edit</a> 
+<form action="/slogans/<%= @slogan.id %>" method="post">
+	<input type="hidden" name="_method" value="delete" >
+	<input type="submit" value="Delete" \>
+</form>
+</div>
+
+
+
+<a href="/slogans">Back to all Slogans</a>
+
+
