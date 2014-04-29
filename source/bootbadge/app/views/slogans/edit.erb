@@ -4,6 +4,7 @@
 <form action="/slogans/<%= @slogan.id %>" method="POST">
 	<input type="hidden" name="_method" value="PUT" />
 
-	<%= erb :_slogan_fields %>
+	<%= erb 'slogans/_slogan_fields'.to_sym %>
 
 </form>
+

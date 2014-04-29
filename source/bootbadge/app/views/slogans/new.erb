@@ -1,0 +1,17 @@
+
+
+<h1> Create a new Slogan</h1>
+
+<div>
+(for <%= @user.fullname %>)
+</div>
+
+
+<div>
+<form action="/slogans/" method="post">
+
+	<%= erb 'slogans/_slogan_fields'.to_sym %>
+
+</form>
+</div>
+

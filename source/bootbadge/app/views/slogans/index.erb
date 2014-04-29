@@ -1,0 +1,17 @@
+
+
+
+<h1>Slogans</h1>
+
+<ul>
+<% @slogans.each do |slogan| %>
+<li> <a href="/slogans/<%= slogan.id %>"><%= slogan.content %></a>
+<% end %>
+</ul>
+
+<a href="/slogans/new">Create a new Slogan</a>
+
+
+
+
+

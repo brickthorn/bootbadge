@@ -1,0 +1,32 @@
+
+TO DO:
+- create the right styling - improve the CSS
+	- refactoring CSS?
+- clean up the index.erb - remove extra routes!
+
+
+Setup:
+- V1 - populate DB manually w/ student names
+- V2 - create automated process to access socrates/people
+
+LATER:
+- replace buttons w/ image elements
+- ajaxify voting
+- authentication - how to use socrates/people?
+	- Users can't see their own slogans or vote on them
+	- Users can vote on a slogan only once!
+- cohort model
+	- create validations?  (needed?)
+
+DONE:
+- AR associations need to be created for users and slogans
+- Validation - All slogans must have a user_id (validation in the class)
+- Create the right user flow - How will this appear?
+- create display for votes
+	- vote up/down links
+	- create a tally of votes:
+		Slogan.find(1).votes.map(&:vote).inject(&:+)
+- update the Slogan class
+	- points method
+	- sort_by_points method
+

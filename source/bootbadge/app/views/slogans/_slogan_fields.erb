@@ -1,0 +1,7 @@
+
+<div>
+	<%= puts "--------- Slogan user id is #{@slogan.user_id} in form" %>
+	<input type="hidden" name="slogan[user_id]" value="<%= @slogan.user_id %>" />
+	<input type="text" name="slogan[content]" value="<%= @slogan.content %>" />
+	<input type="submit" name="Submit" />
+</div>
