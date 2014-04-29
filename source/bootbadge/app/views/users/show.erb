@@ -3,23 +3,49 @@
 <h1> <%= @cohort.name if @cohort %> </h1>
 <h2> <%= @user.fullname %> </h2>
 
-<ul>
-<% @slogans.each do |slogan| %>
-	<li> <%= slogan.content %>  
+
+<div id="slogan_list" style="width:600px">
+
+	<% @slogans.each_with_index do |slogan, index| %>
+
+	<div class="row" style="padding:2px 10px;width:600px;overflow:hidden">
+
+		<div class="slogan" style="padding-right:25px;float:left;font-weight:bold">
+		<%= "#{index+1}) #{slogan.content}" %>  
+		</div>
+
+		<div class="vote" style="float:left;padding-right:0px">
 		<form action="/slogans/<%= slogan.id %>/vote/" method="post">
 			<input type="hidden" name="vote[slogan_id]" value= <%= slogan.id %> >
 			<input type="hidden" name="vote[vote]" value=1>
-			<input type="submit" name="up" value="up" > 
+			<button type="submit" style="padding:1px;vertical-align:middle;border: 0; background: transparent">
+			    <img src="/images/upvote.gif" alt="upvote" />
+			</button>
 		</form>
+		</div>
+
+
+		<div class="vote" style="float:left;">
 		<form action="/slogans/<%= slogan.id %>/vote/" method="post">
 			<input type="hidden" name="vote[slogan_id]" value= <%= slogan.id %> >
 			<input type="hidden" name="vote[vote]" value=-1>
-			<input type="submit" name="down" value="down" > 
+			<button type="submit" style="padding:0px;vertical-align:middle;border:0;background:transparent">
+			    <img src="/images/downvote.gif" alt="downvote" />
+			</button>
 		</form>
-		(<%= slogan.points %> points)   <!-- BUGBUG -->
-<% end %>
-</ul>
+		</div>
 
-<a href="/users/<%= @user.id %>/slogans/new"> Add a new slogan </a>
+		<div id="points" style="float:left;font-size:11px;position:relative;top:50%;transform:translateY(-50%)">
+			(<%= slogan.points %> points)   
+		</div>
+
+	</div>
+	<% end %>
+
+</div>
+
+<div class="add_new">
+	<a href="/users/<%= @user.id %>/slogans/new"> Add a new slogan </a>
+</div>
 
 

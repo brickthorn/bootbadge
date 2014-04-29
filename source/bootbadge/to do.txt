@@ -3,6 +3,7 @@ TO DO:
 - create the right styling - improve the CSS
 	- refactoring CSS?
 - clean up the index.erb - remove extra routes!
+- create new form for posting a new slogan right from the show page
 
 
 Setup:
@@ -15,6 +16,7 @@ LATER:
 - authentication - how to use socrates/people?
 	- Users can't see their own slogans or vote on them
 	- Users can vote on a slogan only once!
+	- Users can submit only one slogan
 - cohort model
 	- create validations?  (needed?)
 
