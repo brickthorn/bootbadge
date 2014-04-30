@@ -84,8 +84,7 @@ get '/users/:id/slogans/new' do
   erb '/slogans/new'.to_sym
 end
 
-# create
-post 'users/:id/slogans/' do 
+post '/users/:id/slogans/' do 
   Slogan.create(params[:slogan])
   user = User.find(params[:id])
   redirect "/cohorts/#{user.cohort_id}/users/#{user.id}"

@@ -1,24 +1,26 @@
 
 
-<h1> <%= @cohort.name if @cohort %> </h1>
-<h2> <%= @user.fullname %> </h2>
+ <!-- <h1> <%= @cohort.name if @cohort %> </h1> -->
+<h1> Boot Badge </h1>
+
+<h2> <%= @user.fullname %>'s Badges </h2>
 
 
-<div id="slogan_list" style="width:600px">
+<div id="slogan-list" style="width:600px">
 
 	<% @slogans.each_with_index do |slogan, index| %>
 
-	<div class="row" style="padding:2px 10px;width:600px;overflow:hidden">
+	<div class="row" style="padding:3px 30px;width:600px;overflow:hidden">
 
 		<div class="slogan" style="padding-right:25px;float:left;font-weight:bold">
 		<%= "#{index+1}) #{slogan.content}" %>  
 		</div>
 
-		<div class="vote" style="float:left;padding-right:0px">
+		<div class="vote" style="float:left">
 		<form action="/slogans/<%= slogan.id %>/vote/" method="post">
 			<input type="hidden" name="vote[slogan_id]" value= <%= slogan.id %> >
 			<input type="hidden" name="vote[vote]" value=1>
-			<button type="submit" style="padding:1px;vertical-align:middle;border: 0; background: transparent">
+			<button type="submit" style="padding:1px;vertical-align:bottom;border: 0; background: transparent">
 			    <img src="/images/upvote.gif" alt="upvote" />
 			</button>
 		</form>
@@ -29,13 +31,13 @@
 		<form action="/slogans/<%= slogan.id %>/vote/" method="post">
 			<input type="hidden" name="vote[slogan_id]" value= <%= slogan.id %> >
 			<input type="hidden" name="vote[vote]" value=-1>
-			<button type="submit" style="padding:0px;vertical-align:middle;border:0;background:transparent">
+			<button type="submit" style="padding:0px;vertical-align:bottom;border:0;background:transparent">
 			    <img src="/images/downvote.gif" alt="downvote" />
 			</button>
 		</form>
 		</div>
 
-		<div id="points" style="float:left;font-size:11px;position:relative;top:50%;transform:translateY(-50%)">
+		<div id="points" style="padding:5px;float:left;font-size:11px">
 			(<%= slogan.points %> points)   
 		</div>
 
@@ -44,8 +46,22 @@
 
 </div>
 
-<div class="add_new">
-	<a href="/users/<%= @user.id %>/slogans/new"> Add a new slogan </a>
-</div>
 
+<div id="add-slogan" style="width:600px;overflow:hidden;margin-top:10px" >
+
+	<div class="add_badge" style="font-family:'Oswald','sans-serif';font-size:24px;padding:3px;float:left;vertical-align:center">
+		Add a Badge: 
+	</div>
+
+	<div class="form" style="float:left;padding:3px">
+		<form action="/users/<%= @user.id %>/slogans/" method="post">
+			<input type="hidden" name="slogan[user_id]" value="<%= @user.id %>" />
+			<input type="text" name="slogan[content]" />
+			<button type="submit" style="padding:0px;vertical-align:bottom;border:0;background:transparent">
+			    <img src="/images/add_button.png" style="max-width:25px; max-height:25px" alt="add slogan" />
+			</button>
+		</form>
+	</div>
+
+</div>
 

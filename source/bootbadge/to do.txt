@@ -1,9 +1,9 @@
 
 TO DO:
-- create the right styling - improve the CSS
-	- refactoring CSS?
+- refactor the CSS
+	- div tags to style text? vs. span tags
+	- update the <h1> tag
 - clean up the index.erb - remove extra routes!
-- create new form for posting a new slogan right from the show page
 
 
 Setup:
