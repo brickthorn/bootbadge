@@ -6,21 +6,21 @@
 <h2> <%= @user.fullname %>'s Badges </h2>
 
 
-<div id="slogan-list" style="width:600px">
+<div class="slogan-list">
 
 	<% @slogans.each_with_index do |slogan, index| %>
 
-	<div class="row" style="padding:3px 30px;width:600px;overflow:hidden">
+	<div class="row">
 
-		<div class="slogan" style="padding-right:25px;float:left;font-weight:bold">
+		<div class="slogan"> 
 		<%= "#{index+1}) #{slogan.content}" %>  
 		</div>
 
-		<div class="vote" style="float:left">
+		<div class="vote">
 		<form action="/slogans/<%= slogan.id %>/vote/" method="post">
 			<input type="hidden" name="vote[slogan_id]" value= <%= slogan.id %> >
 			<input type="hidden" name="vote[vote]" value=1>
-			<button type="submit" style="padding:1px;vertical-align:bottom;border: 0; background: transparent">
+			<button type="submit" name="submit"> 
 			    <img src="/images/upvote.gif" alt="upvote" />
 			</button> </form>
 		</div>
@@ -30,13 +30,13 @@
 		<form action="/slogans/<%= slogan.id %>/vote/" method="post">
 			<input type="hidden" name="vote[slogan_id]" value= <%= slogan.id %> >
 			<input type="hidden" name="vote[vote]" value=-1>
-			<button type="submit" style="padding:0px;vertical-align:bottom;border:0;background:transparent">
+			<button type="submit">
 			    <img src="/images/downvote.gif" alt="downvote" />
 			</button>
 		</form>
 		</div>
 
-		<div id="points" style="padding:5px;float:left;font-size:11px">
+		<div class="points">
 			(<%= slogan.points %> points)   
 		</div>
 
@@ -46,27 +46,27 @@
 </div>
 
 
-<div id="add-slogan" style="width:600px;overflow:hidden;margin-top:10px" >
+<div class="add-slogan">
 
-	<div class="add_badge" style="font-family:'Oswald','sans-serif';font-size:24px;padding:3px;float:left;vertical-align:center">
+	<div class="add-badge">
 		Add a Badge: 
 	</div>
 
-	<div class="form" style="float:left;padding:3px">
+	<div class="badge-form"> 
 		<form action="/users/<%= @user.id %>/slogans/" method="post">
 			<input type="hidden" name="slogan[user_id]" value="<%= @user.id %>" />
 			<input type="text" name="slogan[content]" />
-			<button type="submit" style="padding:0px;vertical-align:bottom;border:0;background:transparent">
-			    <img src="/images/add_button.png" style="max-width:25px; max-height:25px" alt="add slogan" />
+			<button type="submit">
+			    <img class="add-slogan-button" src="/images/add_button.png" alt="add slogan" />
 			</button>
 		</form>
 	</div>
 
 </div>
-<div id="nav" style="width:600px;overflow:hidden;margin-top:10px;style="font-family:'Oswald','sans-serif';font-size:24px;padding:3px;float:left;vertical-align:center">
-	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.previous.id %>">PREVIOUS</a> |
+<div class="nav"> 
+	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.previous_id %>">PREVIOUS</a> |
 	<a href="/cohorts/<%= @cohort.id %>"> ALL </a> |
-	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.next.id %>">NEXT</a> 
+	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.next_id %>">NEXT</a> 
 
 </div>
 <!-- <div class="arrow-right"></div> -->

@@ -14,25 +14,96 @@ h1 {font-family: 'Black Ops One', cursive;
 	padding: 0px 10px;
 	margin: 10px 0px 5px 0px;
 	font-size: 50px;
- 	}
+}
 
 h2 {text-align: left;
 	font-family: 'Oswald', 'sans-serif';
 	padding: 0px 20px;
 	margin: 5px 0px 10px 0px;
-	}
+}
+
+
+button {
+	padding:1px;
+	vertical-align:bottom;
+	border: 0; 
+	background: transparent;
+}
 
 
 .slogan {
-		font-family: 'Oswald', 'sans-serif';
-        font-size: 18px;
-      	}
+	font-family: 'Oswald', 'sans-serif';
+  font-size: 18px;
+ }
 
 
-.arrow-right {
-	width: 0; 
-	height: 0; 
-	border-top: 60px solid transparent;
-	border-bottom: 60px solid transparent;
-	border-left: 20px solid gray;
+.slogan_list {
+	width: 600px;
 }
+
+.row {
+	padding: 3px 30px;
+	width: 600px;
+	overflow: hidden;
+}
+
+.slogan {
+	padding-right:25px;
+	float:left;
+	font-weight:bold
+}
+
+.vote {
+	float:left;
+}
+
+.points {
+	padding:5px;
+	float:left;
+	font-size:11px;
+}
+
+.add-slogan {
+  width:600px;
+  overflow:hidden;
+  margin-top:10px;
+}
+
+
+.add-badge {
+	font-family:'Oswald','sans-serif';
+	font-size:24px;
+	padding:3px;
+	float:left;
+	vertical-align:center;
+}
+
+
+.badge-form {
+	float:left;
+	padding:3px;
+}
+
+.add-slogan-button{
+	max-width:25px; 
+	max-height:25px;
+}
+
+
+.nav {
+	font-family:'Oswald','sans-serif';
+	width:600px;
+	overflow:hidden;
+	margin-top:10px;
+	font-size:16px;
+	padding:3px;
+	float:left;
+	vertical-align:center;
+}
+
+
+
+
+
+
+
