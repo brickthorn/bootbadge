@@ -4,7 +4,6 @@ TO DO:
 	- div tags to style text? vs. span tags
 	- update the <h1> tag
 - clean up the index.erb - remove extra routes!
-- make the prev | all | next links more enticing
 
 
 Setup:

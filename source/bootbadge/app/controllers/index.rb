@@ -6,38 +6,25 @@ end
 
 
 # ================== SLOGANS =======================
-# show all
+# show all (admin - hidden)   
 get '/slogans/' do
   @slogans = Slogan.all
   erb 'slogans/index'.to_sym
 end
 
-# new
-get '/slogans/new' do 
-  @slogan = Slogan.new
-  erb 'slogans/new'.to_sym
-end
-
-# edit
+# edit (admin - hidden)
 get '/slogans/:id/edit' do
   @slogan = Slogan.find(params[:id])
   erb 'slogans/edit'.to_sym
 end
 
-# show 
+# show (admin - hidden)
 get '/slogans/:id' do 
   @slogan = Slogan.find(params[:id])
   erb 'slogans/show'.to_sym
 end
 
-# create
-post '/slogans/' do 
-  slogan = Slogan.create(params[:slogan])
-  user = User.find(slogan.user_id)
-  redirect "/cohorts/#{user.cohort_id}/users/#{user.id}"
-end
-
-# update 
+# update (admin - hidden) 
 put '/slogans/:id' do 
   slogan = Slogan.find(params[:id])
   slogan.update_attributes(params[:slogan])
@@ -45,43 +32,36 @@ put '/slogans/:id' do
 end
 
 
-# destroy 
+# destroy (admin - hidden)
 delete '/slogans/:id' do 
   slogan = Slogan.find(params[:id])
   slogan.destroy
   redirect "/slogans/"
 end
 
+# create a vote
 post '/slogans/:id/vote/' do
   vote = Vote.create(params[:vote])
-  puts "-"*50
-  p vote  
   slogan = Slogan.find(params[:id])
   user = User.find(slogan.user_id)
-  puts "-"*50
-  p user
   redirect "cohorts/#{user.cohort_id}/users/#{user.id}"
 end
 
 
 # ==========================  USERS =========================
 
+# show all (admin - hidden)   
 get '/users/' do 
   @users = User.all
   erb 'users/index'.to_sym
 end
 
+# show (admin - hidden)
 get '/users/:id' do 
   @user = User.find(params[:id])
   @slogans = @user.slogans
+  @cohort = @user.cohort
   erb 'users/show'.to_sym
-end
-
-get '/users/:id/slogans/new' do
-  @slogan = Slogan.new(user_id: params[:id])  
-  @user = User.find(params[:id])
-  @cohort = @user.cohort_id
-  erb '/slogans/new'.to_sym
 end
 
 post '/users/:id/slogans/' do 
@@ -103,16 +83,10 @@ get '/cohorts/:cohort_id/users/:user_id' do
   @user = User.find(params[:user_id])
   @cohort = Cohort.find(params[:cohort_id])
 
-  @slogans = @user.slogans.sort {|a, b| b.points <=> a.points } #descending sort
+  @slogans = @user.slogans.sort {|a, b| b.points <=> a.points } #descending sort by points
   erb '/users/show'.to_sym
 end
 
-
-
-# private 
-# def generate_formatted_name(cohort)
-#   cohort.name.downcase.join('-') + '-' + cohort.year.to_s
-# end
 
 
 
