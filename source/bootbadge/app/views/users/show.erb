@@ -2,7 +2,7 @@
 
  <!-- <h1> <%= @cohort.name if @cohort %> </h1> -->
 <h1> Boot Badge </h1>
-
+<!-- Words To Be Remembered By -->
 <h2> <%= @user.fullname %>'s Badges </h2>
 
 
@@ -22,8 +22,7 @@
 			<input type="hidden" name="vote[vote]" value=1>
 			<button type="submit" style="padding:1px;vertical-align:bottom;border: 0; background: transparent">
 			    <img src="/images/upvote.gif" alt="upvote" />
-			</button>
-		</form>
+			</button> </form>
 		</div>
 
 
@@ -64,4 +63,10 @@
 	</div>
 
 </div>
+<div id="nav" style="width:600px;overflow:hidden;margin-top:10px;style="font-family:'Oswald','sans-serif';font-size:24px;padding:3px;float:left;vertical-align:center">
+	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.previous.id %>">PREVIOUS</a> |
+	<a href="/cohorts/<%= @cohort.id %>"> ALL </a> |
+	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.next.id %>">NEXT</a> 
 
+</div>
+<!-- <div class="arrow-right"></div> -->

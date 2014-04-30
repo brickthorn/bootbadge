@@ -4,6 +4,7 @@ TO DO:
 	- div tags to style text? vs. span tags
 	- update the <h1> tag
 - clean up the index.erb - remove extra routes!
+- make the prev | all | next links more enticing
 
 
 Setup:
@@ -11,8 +12,8 @@ Setup:
 - V2 - create automated process to access socrates/people
 
 LATER:
-- replace buttons w/ image elements
 - ajaxify voting
+- add photos
 - authentication - how to use socrates/people?
 	- Users can't see their own slogans or vote on them
 	- Users can vote on a slogan only once!

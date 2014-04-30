@@ -102,17 +102,14 @@ end
 get '/cohorts/:cohort_id/users/:user_id' do 
   @user = User.find(params[:user_id])
   @cohort = Cohort.find(params[:cohort_id])
+
   @slogans = @user.slogans.sort {|a, b| b.points <=> a.points } #descending sort
   erb '/users/show'.to_sym
 end
 
-# get '/users/:user_id/slogans/new' do 
 
-# get '/:cohort_name/user/:id'
-# end
 
 # private 
-
 # def generate_formatted_name(cohort)
 #   cohort.name.downcase.join('-') + '-' + cohort.year.to_s
 # end
