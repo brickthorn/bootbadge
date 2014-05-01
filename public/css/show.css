@@ -1,76 +1,64 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
+/*show.css*/
 
-th {
-  text-align: left;
-}
-
-h1 {font-family: 'Black Ops One', cursive;
+.show-user h1 {font-family: 'Black Ops One', cursive;
 	text-align: left;
 	padding: 0px 10px;
 	margin: 10px 0px 5px 0px;
 	font-size: 50px;
 }
 
-h2 {text-align: left;
+.show-user h2 {text-align: left;
 	font-family: 'Oswald', 'sans-serif';
 	padding: 0px 20px;
 	margin: 5px 0px 10px 0px;
 }
 
-
-button {
-	padding:1px;
-	vertical-align:bottom;
-	border: 0; 
-	background: transparent;
+/*to use, add 2 classes to the html element*/
+.show-user .padded {
+	padding: 3px 30px;
 }
 
-
-.slogan {
+.show-user .slogan {
 	font-family: 'Oswald', 'sans-serif';
   font-size: 18px;
  }
 
 
-.slogan_list {
+.show-user .slogan-list {
 	width: 600px;
 }
 
-.row {
+.show-user .slogan-list .row {
 	padding: 3px 30px;
 	width: 600px;
 	overflow: hidden;
 }
 
-.slogan {
+.show-user .slogan-list .slogan {
 	padding-right:25px;
 	float:left;
 	font-weight:bold
 }
 
-.vote {
+.show-user .slogan-list .vote {
 	float:left;
 }
 
-.points {
+.show-user .slogan-list .points {
 	padding:5px;
 	float:left;
 	font-size:11px;
 }
 
-.add-slogan {
+.show-user .add-slogan {
   width:600px;
   overflow:hidden;
   margin-top:10px;
+  clear:right;
 }
 
 
-.add-badge {
+.show-user .add-badge {
 	font-family:'Oswald','sans-serif';
 	font-size:24px;
 	padding:3px;
@@ -79,18 +67,18 @@ button {
 }
 
 
-.badge-form {
+.show-user .badge-form {
 	float:left;
 	padding:3px;
 }
 
-.add-slogan-button{
+.show-user .add-slogan-button{
 	max-width:25px; 
 	max-height:25px;
 }
 
 
-.nav {
+.show-user .nav {
 	font-family:'Oswald','sans-serif';
 	width:600px;
 	overflow:hidden;
@@ -101,9 +89,9 @@ button {
 	vertical-align:center;
 }
 
-
-
-
-
-
-
+.show-user button {
+	padding:1px;
+	vertical-align:bottom;
+	border: 0; 
+	background: transparent;
+}

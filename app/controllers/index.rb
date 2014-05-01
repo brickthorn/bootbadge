@@ -1,6 +1,6 @@
 
+# home page - not used, direct cohort id needed
 get '/' do
-  # Look in app/views/index.erb
   erb :index
 end
 
