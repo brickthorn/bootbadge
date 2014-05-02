@@ -85,28 +85,26 @@
 	display: inline;
 	overflow:hidden;
 	margin-top:10px;
-	font-size:26px;
+	font-size:18px;
 	padding:3px;
 	float:left;
 	vertical-align:center;
 }
 
-.show-user .nav .next {
+.show-user .nav .nav-link {
 	display: inline;
+	padding: 10px;
+}
+
+.show-user .nav .nav-link a {
+	text-decoration: none;
 }
 
 .show-user .nav .pipe-separator {
 	display: inline;
-	padding: 20px;
+	padding: 3px;
 }
 
-.show-user .nav .all {
-	display: inline;
-}
-
-.show-user .nav .previous {
-	display: inline;
-}
 
 .show-user button {
 	padding:1px;
