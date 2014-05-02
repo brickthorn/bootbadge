@@ -57,3 +57,15 @@
 5)  
 
 
+###HEROKU NOTES
+- git push heroku master 
+#  don't forget to run the migrations!  (the aren't automatically run)
+- heroku run rake db:migrate
+- heroku pg:info # info about postgres DB
+- heroku run console
+	- require './config/environment'
+	- how to see the schemas created?
+- run a seeder file from the irb (create cohort and all cohort members)
+
+
+

@@ -67,8 +67,20 @@
 </div>
 
 <div class="nav"> 
-	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.previous_id %>">PREVIOUS</a> |
-	<a href="/cohorts/<%= @cohort.id %>"> ALL </a> |
-	<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.next_id %>">NEXT</a> 
+	<div class="previous"> 
+		<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.previous_id %>">< PREVIOUS</a> 
+	</div>
+	<div class="pipe-separator">
+		|
+	</div>
+	<div class="all"> 
+		<a href="/cohorts/<%= @cohort.id %>"> ALL </a>
+	</div>
+	<div class="pipe-separator">
+		|
+	</div>
+	<div class="next"> 
+		<a href="/cohorts/<%= @cohort.id %>/users/<%= @user.next_id %>">NEXT > </a> 
+	</div>
 </div>
 <!-- <div class="arrow-right"></div> -->

@@ -80,13 +80,32 @@
 
 .show-user .nav {
 	font-family:'Oswald','sans-serif';
-	width:600px;
+	font-weight: bold;
+	width:100%;
+	display: inline;
 	overflow:hidden;
 	margin-top:10px;
-	font-size:16px;
+	font-size:26px;
 	padding:3px;
 	float:left;
 	vertical-align:center;
+}
+
+.show-user .nav .next {
+	display: inline;
+}
+
+.show-user .nav .pipe-separator {
+	display: inline;
+	padding: 20px;
+}
+
+.show-user .nav .all {
+	display: inline;
+}
+
+.show-user .nav .previous {
+	display: inline;
 }
 
 .show-user button {
