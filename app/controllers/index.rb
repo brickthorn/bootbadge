@@ -1,4 +1,5 @@
 
+
 # home page - not used, direct cohort id needed
 get '/' do
   erb :index
@@ -74,6 +75,7 @@ end
 # ==========================  COHORT PATHS ========================
 
 get '/cohorts/:id' do 
+  session[:user_id] = 3
   @cohort = Cohort.find(params[:id])
   @users = User.find_all_by_cohort_id(params[:id])
   erb '/cohorts/show'.to_sym

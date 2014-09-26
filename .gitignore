@@ -20,6 +20,7 @@ config/secrets.yml
 ## Personal
 to_do.txt
 bootbadger.md
+how_to_update_DB.mdown
 
 ## Environment normalisation:
 /.bundle

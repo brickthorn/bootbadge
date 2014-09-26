@@ -1,33 +1,31 @@
 require_relative '../config/environment'
 
-SKIPPERS_NAMES = ["Alexandra Swart",
-                  "Andrew Roberts",
-                  "Ashwin Kumar",
-                  "Bo Phane Keopaseut",
-                  "Brittan McGinnis",
-                  "Charles Raymond Arciniega",
-                  "Darrell Sommerlatt",
-                  "David Wilbanks",
-                  "Erin Snyder",
-                  "Greg Gerla",
-                  "Hemchandra Inamdar",
-                  "Jackson Behan",
-                  "Jonathan Wrobel",
-                  "Kelley Puckett",
-                  "Laura Cossette",
-                  "Lyndsey Williams",
-                  "Matt Lewis",
-                  "Namrata Honnavar",
-                  "Nathan Sass",
-                  "Nina Hwang",
-                  "Paolo Payumo",
-                  "Ravi S. Ramphal",
-                  "Rodrigo Manubens",
-                  "Tyler Stauss"]
+STUDENT_NAMES = ["Alan Cohen",
+"Alan Florendo",
+"Alexander Le",
+"Alexei Pesic",
+"Audrey McGowan",
+"Avi Fox-Rosen",
+"Bruno Pasini",
+"Chase Blokker",
+"David Bragdon",
+"Derek Johnson",
+"Edward Kim",
+"Eric Shemtov",
+"Garrett Dalton",
+"George Zeng",
+"John Berry",
+"Joseph White",
+"Justin Lee",
+"Justin Wagner",
+"Kimberly Brewer",
+"Max Lock",
+"Ryan Storberg",
+"Stephen Craig Estrada",
+"Yariv Kirschner"]
+ 
 
-COHORT = "Fiery Skippers"
-
-SKIPPERS_NAMES.each do |name|
-  User.create(fullname: name, cohort_id: 1) 
+STUDENT_NAMES.each do |name|
+  User.create(fullname: name, cohort_id: 3) 
 end
 
