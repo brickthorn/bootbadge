@@ -8,7 +8,6 @@ graduating_cohorts_data = eval(File.read("seeds.txt"))
 # p graduating_cohorts_data
 
 
-graduating_cohorts_data.each do |cohort_data|
   
   # first, all the existing cohorts should be deleted?
   # option 1 - this script is run once automatically 1 week into start
@@ -23,6 +22,7 @@ graduating_cohorts_data.each do |cohort_data|
 # manual running of another file to update cohorts correctly?
   # manual running requires logging in to heroku?
 
+graduating_cohorts_data.each do |cohort_data|
   c = Cohort.where(name: cohort_data[:name]).first_or_initialize
 
   c.name  ||= cohort_data[:name]
