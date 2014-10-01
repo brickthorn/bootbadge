@@ -1,9 +1,10 @@
 
 class Slogan < ActiveRecord::Base
-  # Remember to create a migration!
 
   validates_presence_of :user_id
-  # add validation: if not containing `<script`
+  validates_presence_of :content
+  validates :content, format: { without: /<script>/,
+                                message: "no javascript injection attacks allowed" }
 
   belongs_to :user
   has_many :votes
