@@ -1,0 +1,12 @@
+
+<h1> Graduating Cohorts </h1>
+
+
+<ul>
+
+<% @cohorts.each do |cohort| %>
+	<li> <a href="/cohorts/<%= cohort.id %>"> <%= cohort.location %> </a>
+<% end %>
+</ul>
+
+
